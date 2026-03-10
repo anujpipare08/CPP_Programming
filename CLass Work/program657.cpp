@@ -1,0 +1,28 @@
+// Input 4
+// Output : 1 +  2 + 3 + 4 = 10
+
+#include<iostream>
+using namespace std;
+
+int Addition(int iNo)
+{
+    static int iSum = 0;
+    static int i = 0;
+
+    i = 1;
+    if(i <= iNo)
+    {
+        iSum = iSum + 1;
+        i++;
+        Addition(iNo);
+    }
+}
+int main()
+{
+    int iRet = 0;
+
+    iRet = Addition(4); 
+    cout<<iRet<<"\n";
+    
+    return 0;
+}
