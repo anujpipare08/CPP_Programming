@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+void strdisplay(char *str)
+{
+    int iCount = 0;
+
+    if(*str != '\0')
+    {
+        cout<<str<<"\n";
+        str++;
+        strdisplay(str);
+    }
+}
+int main()
+{
+    char Arr[50] = {'\0'};
+
+    printf("Enter string : \n");
+    scanf("%s[^'\n']s",Arr);
+
+    strdisplay(Arr);
+    return 0;
+}
